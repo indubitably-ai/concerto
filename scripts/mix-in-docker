@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+IMAGE_NAME="${CONCERTO_DEV_IMAGE:-concerto-dev:latest}"
+WORKDIR="/workspace/concerto"
+
+docker build -t "$IMAGE_NAME" -f docker/dev.Dockerfile .
+docker run --rm -it \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v "$(cd .. && pwd)":/workspace \
+  -w "$WORKDIR" \
+  "$IMAGE_NAME" \
+  mix "$@"
