@@ -1,3 +1,5 @@
+![Concerto hero](docs/assets/concerto-hero.png)
+
 # Concerto
 
 Concerto is a minimal Elixir/OTP orchestration service that pulls work from Postgres, materializes
