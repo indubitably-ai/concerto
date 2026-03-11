@@ -33,7 +33,8 @@ Keep `AGENTS.md` short and use this file for durable details that should stay di
 ## Validation Expectations
 
 - Run focused checks while iterating.
-- Run the full quality gate before handoff:
+- Use `mix specs.check` after modifying public function signatures or adjacent specs in `lib/`.
+- Run the full quality gate before handoff or review:
 
 ```bash
 make all
