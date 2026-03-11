@@ -1,6 +1,6 @@
 # Concerto
 
-Use this file as the repository-level entrypoint for agents. Keep it short and route to the
+Use this file as the repository-level entry point for agents. Keep it short and route to the
 canonical docs instead of duplicating long guidance here.
 
 ## Start Here
@@ -15,7 +15,7 @@ canonical docs instead of duplicating long guidance here.
 
 - [`elixir/README.md`](elixir/README.md): Elixir reference implementation overview.
 - [`elixir/AGENTS.md`](elixir/AGENTS.md): Elixir-specific rules, invariants, and validation
-  entrypoint.
+  entry point.
 - [`elixir/WORKFLOW.md`](elixir/WORKFLOW.md): issue execution contract for the reference
   implementation.
 
