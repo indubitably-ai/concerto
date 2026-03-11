@@ -30,7 +30,7 @@ accurate.
    docs instead of relying on a single large instruction surface.
 2. [`docs/README.md`](README.md) now acts as a repository-level docs index, making progressive
    disclosure explicit.
-3. [`elixir/AGENTS.md`](../elixir/AGENTS.md) was trimmed into a concise entrypoint, while
+3. [`elixir/AGENTS.md`](../elixir/AGENTS.md) was trimmed into a concise entry point, while
    [`elixir/docs/agent-guide.md`](../elixir/docs/agent-guide.md) now carries the durable Elixir-
    specific guidance.
 4. The root [`README.md`](../README.md) now includes a clearer repository map so agents and humans
@@ -42,7 +42,7 @@ accurate.
 
 1. The repo has clear canonical anchors for different layers of knowledge.
    - [`SPEC.md`](../SPEC.md) is the portable product and runtime contract.
-   - [`README.md`](../README.md) explains the project and points to the main entrypoints.
+   - [`README.md`](../README.md) explains the project and points to the main entry points.
    - [`docs/README.md`](README.md) acts as the top-level docs map.
    - [`elixir/README.md`](../elixir/README.md), [`elixir/WORKFLOW.md`](../elixir/WORKFLOW.md), and
      [`elixir/docs/agent-guide.md`](../elixir/docs/agent-guide.md) split implementation guidance by
@@ -120,18 +120,18 @@ or reviewer memory. The smallest useful version would be:
 This keeps the root `AGENTS.md` and `README.md` short while giving the repo a place to accumulate
 high-value context.
 
-### Priority 3: Add recurring doc-gardening
+### Priority 5: Add recurring doc-gardening
 
 The harness guide explicitly recommends cleanup as a continuous practice. Once the repo has a root
 doc map, a recurring maintenance task can keep it current by opening small doc-fix PRs.
 
-### Priority 4: Add design-history and quality docs when they are truly needed
+### Priority 6: Add design-history and quality docs when they are truly needed
 
 The next layer of value is not more generic guidance; it is versioned design context and focused
 operational references for the parts of Concerto that are easy to forget or re-litigate. Add
 decision, architecture, or quality docs only when the team has concrete practices worth preserving.
 
-### Priority 5: Align workflow docs and Linear states
+### Priority 3: Align workflow docs and Linear states
 
 Make the documented issue flow executable in the actual project tool:
 
@@ -142,7 +142,7 @@ The harness guide emphasizes executable loops and legible tooling. If the repo c
 tracker disagree, agents lose that legibility at the exact point where review and merge handoffs
 matter most.
 
-### Priority 6: Document unattended workspace prerequisites
+### Priority 4: Document unattended workspace prerequisites
 
 Add a short operational note that makes the publish path explicit for autonomous runs:
 
