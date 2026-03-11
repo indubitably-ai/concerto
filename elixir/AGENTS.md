@@ -3,7 +3,7 @@
 This directory contains the Elixir orchestration service that polls Linear, creates per-issue
 workspaces, and runs Codex in app-server mode.
 
-Use this file as a fast entrypoint. Keep durable details in the linked docs rather than expanding
+Use this file as a fast entry point. Keep durable details in the linked docs rather than expanding
 this into a long policy blob.
 
 ## Start Here
@@ -32,4 +32,4 @@ this into a long policy blob.
 ## Docs Policy
 
 - If behavior, config, or operating instructions change, update the matching docs in the same PR.
-- Update this file only when the entrypoint guidance or linked doc map changes.
+- Update this file only when the entry-point guidance or linked doc map changes.
