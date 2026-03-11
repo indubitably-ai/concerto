@@ -50,7 +50,7 @@ The harness-engineering pattern that has worked best for Symphony is:
 
 In this implementation:
 
-- [`AGENTS.md`](AGENTS.md) is the fast entrypoint for critical rules;
+- [`AGENTS.md`](AGENTS.md) is the fast entry point for critical rules;
 - [`docs/agent-guide.md`](docs/agent-guide.md) is the canonical agent-facing guide;
 - [`WORKFLOW.md`](WORKFLOW.md) is the execution contract rendered into Codex sessions.
 
