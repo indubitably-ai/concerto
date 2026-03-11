@@ -1,41 +1,41 @@
-![Concerto hero](docs/assets/concerto-hero.png)
+# Symphony
 
-# Concerto
+Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage
+work instead of supervising coding agents.
 
-Concerto is a minimal Elixir/OTP orchestration service that pulls work from Postgres, materializes
-durable workspaces, and runs `codex app-server` inside isolated Linux containers.
+[![Symphony demo video preview](.github/media/symphony-demo-poster.jpg)](.github/media/symphony-demo.mp4)
 
-## Run
+_In this [demo video](.github/media/symphony-demo.mp4), Symphony monitors a Linear board for work and spawns agents to handle the tasks. The agents complete the tasks and provide proof of work: CI status, PR review feedback, complexity analysis, and walkthrough videos. When accepted, the agents land the PR safely. Engineers do not need to supervise Codex; they can manage the work at a higher level._
 
-Create a `WORKFLOW.md` that matches [specs/spec.md](/Users/gp/src/concerto/specs/spec.md), then run:
+> [!WARNING]
+> Symphony is a low-key engineering preview for testing in trusted environments.
 
-```bash
-mix concerto.run --workflow-root /abs/path/to/workflow-root
-```
+## Running Symphony
 
-## Validation
+### Requirements
 
-The canonical layer commands are:
+Symphony works best in codebases that have adopted
+[harness engineering](https://openai.com/index/harness-engineering/). Symphony is the next step --
+moving from managing coding agents to managing work that needs to get done.
 
-```bash
-mix test test/unit
-mix test test/component
-mix test test/integration
-mix test test/smoke --include smoke
-```
+### Option 1. Make your own
 
-Each acceptance scenario writes an evidence bundle under `evidence/<scenario-id>/<timestamp>/`.
+Tell your favorite coding agent to build Symphony in a programming language of your choice:
 
-## Repo-Owned Docker Workflow
+> Implement Symphony according to the following spec:
+> https://github.com/openai/symphony/blob/main/SPEC.md
 
-Use the helper script when host `elixir`/`mix` are unavailable:
+### Option 2. Use our experimental reference implementation
 
-```bash
-scripts/mix-in-docker test test/unit
-```
+Check out [elixir/README.md](elixir/README.md) for instructions on how to set up your environment
+and run the Elixir-based Symphony implementation. You can also ask your favorite coding agent to
+help with the setup:
 
-Build the runner image from the parent workspace, which also contains `../codex-indubitably`:
+> Set up Symphony for my repository based on
+> https://github.com/openai/symphony/blob/main/elixir/README.md
 
-```bash
-scripts/build-runner-image
-```
+---
+
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).
