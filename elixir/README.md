@@ -7,10 +7,6 @@ This directory contains the current Elixir/OTP implementation of Symphony, based
 > Symphony Elixir is prototype software intended for evaluation only and is presented as-is.
 > We recommend implementing your own hardened version based on `SPEC.md`.
 
-## Screenshot
-
-![Symphony Elixir screenshot](../.github/media/elixir-screenshot.png)
-
 ## How it works
 
 1. Polls Linear for candidate work
@@ -43,6 +39,20 @@ Symphony stops the active agent for that issue and cleans up matching workspaces
      issue statuses: "Rework", "Human Review", and "Merging". You can customize them in
      Team Settings → Workflow in Linear.
 6. Follow the instructions below to install the required runtime dependencies and start the service.
+
+### Agent-facing docs
+
+The harness-engineering pattern that has worked best for Symphony is:
+
+- keep `AGENTS.md` short and use it as a table of contents;
+- keep durable guidance in versioned docs beside the code;
+- prefer progressive disclosure over one large instruction file.
+
+In this implementation:
+
+- [`AGENTS.md`](AGENTS.md) is the fast entrypoint for critical rules;
+- [`docs/agent-guide.md`](docs/agent-guide.md) is the canonical agent-facing guide;
+- [`WORKFLOW.md`](WORKFLOW.md) is the execution contract rendered into Codex sessions.
 
 ## Prerequisites
 
