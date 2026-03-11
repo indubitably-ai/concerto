@@ -11,6 +11,8 @@ work at a higher level.
 
 > [!WARNING]
 > Concerto is a low-key engineering preview for testing in trusted environments.
+> Expect rough edges around publish automation, external-service reachability, and other
+> operator-focused workflows that are still being hardened.
 
 ## Running Concerto
 
@@ -40,7 +42,7 @@ Tell your favorite coding agent to build Concerto in a programming language of y
 ### Option 2. Use our experimental reference implementation
 
 Check out [elixir/README.md](elixir/README.md) for instructions on how to set up your environment
-and run the Elixir-based Symphony implementation. You can also ask your favorite coding agent to
+and run the Elixir-based Concerto implementation. You can also ask your favorite coding agent to
 help with the setup:
 
 > Set up Concerto for my repository based on `elixir/README.md`.
@@ -49,7 +51,7 @@ help with the setup:
 
 ## Repository map
 
-- [`AGENTS.md`](AGENTS.md) is the repository-level entrypoint for agents.
+- [`AGENTS.md`](AGENTS.md) is the repository-level entry point for agents.
 - [`docs/README.md`](docs/README.md) is the system-of-record index for durable documentation.
 - [`SPEC.md`](SPEC.md) is the portable service specification used by Concerto.
 - [`docs/agent-guidance-assessment.md`](docs/agent-guidance-assessment.md) reviews the current
@@ -60,7 +62,7 @@ help with the setup:
 - [`elixir/AGENTS.md`](elixir/AGENTS.md) contains implementation-scoped instructions for agents
   working inside the Elixir service.
 - [`elixir/docs/agent-guide.md`](elixir/docs/agent-guide.md) carries the durable Elixir-specific
-  agent guidance behind that entrypoint.
+  agent guidance behind that entry point.
 
 ---
 
