@@ -20,11 +20,16 @@ workspace:
 hooks:
   after_create: |
     git clone --depth 1 git@github.com:indubitably-ai/concerto.git .
+    if command -v mise >/dev/null 2>&1; then
+      cd elixir && mise trust && mise exec -- mix deps.get
+    fi
+  before_remove: |
+    cd elixir && mise exec -- mix workspace.before_remove
 agent:
   max_concurrent_agents: 10
   max_turns: 20
 codex:
-  command: codex --config shell_environment_policy.inherit=all --config model_reasoning_effort=xhigh --model gpt-5.3-codex app-server
+  command: codex --config shell_environment_policy.inherit=all --config model_reasoning_effort=high --model gpt-5.3-codex app-server
   approval_policy: never
   thread_sandbox: workspace-write
   turn_sandbox_policy:
